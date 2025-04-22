@@ -1,0 +1,41 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Expanded Mock USDT Wallet</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="container" id="login-screen">
+    <h2>Login to Wallet</h2>
+    <input type="text" id="login-id" placeholder="Enter Wallet ID" />
+    <button onclick="login()">Login</button>
+  </div>
+
+  <div class="container hidden" id="dashboard">
+    <h2>Welcome, <span id="current-user"></span></h2>
+    <p><strong>Balance:</strong> <span id="balance">0</span> USDT</p>
+
+    <div class="section">
+      <h3>Send USDT</h3>
+      <input type="text" id="receiver" placeholder="Receiver ID" />
+      <input type="number" id="amount" placeholder="Amount" />
+      <button onclick="sendUSDT()">Send</button>
+    </div>
+
+    <div class="section">
+      <h3>Receive QR</h3>
+      <canvas id="qrCanvas"></canvas>
+    </div>
+
+    <div class="section">
+      <h3>Transaction History</h3>
+      <ul id="history"></ul>
+    </div>
+  </div>
+
+  <script src="wallet.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrious/4.0.2/qrious.min.js"></script>
+</body>
+</html>
